@@ -7,6 +7,7 @@ import { UserDataComponent } from './user-data/user-data.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { UserRepoComponent } from './user-repo/user-repo.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { UserRepoComponent } from './user-repo/user-repo.component';
     UserDataComponent,
     SearchBarComponent,
     NotFoundComponent,
-    UserRepoComponent
+    UserRepoComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
