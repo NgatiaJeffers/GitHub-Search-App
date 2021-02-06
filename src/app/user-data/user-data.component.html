@@ -1,16 +1,14 @@
-<div class="container justify-content-center d-flex">
-    <div class="row">
-        <app-search-bar (searchEmiter)="getUser($event)"></app-search-bar>
-    </div>
-</div>
+<div class="con">
+    <app-search-bar (searchEmiter)="getUser($event)"></app-search-bar>
 
-<div class="container justify-content-center d-flex">
-    <div class="row">
-        <div class="card" *ngFor="let u of user">
-            <img class="avatar" [src]="u.avatar_url" alt="User Thumbnail"/>
+    <div class="card" *ngFor="let u of user">
+        <div>
+            <img class="avatar" [src]="u.avatar_url" [alt]="u.name"/>
+        </div>
+        <div class="user-info">
             <h2>{{ u.name }}</h2>
             <p>{{ u.bio }}</p>
-        
+            
             <ul class="info">
                 <li>{{ u.followers }}<strong>Followers</strong></li>
                 <li>{{ u.following }}<strong>Following</strong></li>
