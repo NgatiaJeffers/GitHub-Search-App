@@ -11,32 +11,32 @@ export class GitServiceService {
 
   user: Users[] = [];
   _URL = 'https://api.github.com/users/';
-  token = '?access_token=8b9e17143d094a525a75e0d0637d4f7691770cb4';
+  token = '?8b9e17143d094a525a75e0d0637d4f7691770cb4';
 
   constructor(private http: HttpClient) { }
 
   searchUser(searchTerm: string) {
     interface ApiResponse {
-      avatar_url: any;
-      login: any;
-      name: any;
-      bio: any;
-      followers: any;
-      following: any;
-      public_repos: any;
+      avatar_url: string;
+      name: string;
+      bio: string;
+      followers: string;
+      following: string;
+      public_repos: string;
     }
 
-    return new Promise((resolve, reject) => {
+    let promise = new Promise((resolve, reject) => {
       this.user = [];
       this.http.get<ApiResponse>(this._URL + searchTerm + this.token).toPromise().then((results) => {
         this.user.push(results);
         console.log(results);
 
-        resolve();
+        // resolve();
       }, (err) => {
         reject();
       }
       )
     })
+    return promise;
   }
 }

@@ -1,9 +1,12 @@
 export class Users {
-    avatar_url: any;
-    login: any;
-    name: any;
-    bio: any;
-    followers: any;
-    following: any;
-    public_repos: any;
+
+    constructor(
+        public avatar_url: any,
+        public name: any,
+        public bio: any,
+        public followers: any,
+        public following: any,
+        public public_repos: any
+    ) {}
+
 }

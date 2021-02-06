@@ -10,7 +10,6 @@ import { Users } from './../module/users';
 export class UserDataComponent implements OnInit {
 
   user: Users[];
-  newArray: any;
 
   constructor(private gitServiceService: GitServiceService) { }
 
@@ -27,8 +26,6 @@ export class UserDataComponent implements OnInit {
 
   ngOnInit(): void {
     this.getUser('NgatiaJeffers');
-    let newArray;
-    newArray.load('newArray-js', 'newArray.json', null);
   }
 
 }
