@@ -1,9 +1,6 @@
-<div class="container">
-	<div class="row justify-content-center">
-            <form>
-                <div class="col">
-                    <input class="form-control" type="search" placeholder="Search a Github User">
-                </div>
-            </form>
+<form (submit)="newUser()">
+    <div class="col">
+        <input class="form-control" type="search" placeholder="Search a Github User" name="searchTerm" [(ngModel)]="searchTerm">
     </div>
-</div>
+</form>
+

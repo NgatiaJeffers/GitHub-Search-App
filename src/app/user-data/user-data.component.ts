@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GitServiceService } from './../git-service.service';
+import { Users } from './../module/users';
 
 @Component({
   selector: 'app-user-data',
@@ -7,9 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserDataComponent implements OnInit {
 
-  constructor() { }
+  user: Users[];
+  newArray: any;
+
+  constructor(private gitServiceService: GitServiceService) { }
+
+  getUser(searchTerm) {
+    this.gitServiceService.searchUser(searchTerm).then((success) => {
+      this.user = this.gitServiceService.user;
+      console.log(this.user);
+
+    }, (error) => {
+      console.log(error);
+    }
+    )
+  }
 
   ngOnInit(): void {
+    this.getUser('NgatiaJeffers');
+    let newArray;
+    newArray.load('newArray-js', 'newArray.json', null);
   }
 
 }

@@ -1,5 +1,20 @@
-<div class="container">
+<div class="container justify-content-center d-flex">
     <div class="row">
-        <app-search-bar></app-search-bar>
+        <app-search-bar (searchEmiter)="getUser($event)"></app-search-bar>
+    </div>
+
+    <div class="card" *ngFor="let user for users">
+        <img class="avatar" src="{{ user.avatar_url }}" alt=""/>
+        <h2>{{ user.name }}</h2>
+        <p>{{ user.bio }}</p>
+
+        <ul class="info">
+            <li>{{ user.followers }}<strong>Followers</strong></li>
+            <li>{{ user.following }}<strong>Following</strong></li>
+            <li>{{ user.public_repos }}<strong>Repos</strong></li>
+        </ul>
+        <div id="repos"></div>
     </div>
 </div>
+
+
