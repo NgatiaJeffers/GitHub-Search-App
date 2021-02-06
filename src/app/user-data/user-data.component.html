@@ -1,7 +1,11 @@
-<div class="container justify-content-center d-flex b">
+<div class="container justify-content-center d-flex">
     <div class="row">
         <app-search-bar (searchEmiter)="getUser($event)"></app-search-bar>
+    </div>
+</div>
 
+<div class="container justify-content-center d-flex">
+    <div class="row">
         <div class="card" *ngFor="let u of user">
             <img class="avatar" [src]="u.avatar_url" alt="User Thumbnail"/>
             <h2>{{ u.name }}</h2>
@@ -14,9 +18,9 @@
             </ul>
             <div id="repos"></div>
         </div>
-
     </div>
 </div>
+
 
 
 

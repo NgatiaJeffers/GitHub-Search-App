@@ -31,7 +31,7 @@ export class GitServiceService {
         this.user.push(results);
         console.log(results);
 
-        // resolve();
+        resolve();
       }, (err) => {
         reject();
       }

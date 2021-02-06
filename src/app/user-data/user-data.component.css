@@ -3,19 +3,15 @@
 }
 
 
-.b {
-    background-color: #CDCBD6;
-    background-image: #CDCBD6;
+body {
     flex-direction: column;
     align-items: center;
     font-family: "Poppins", Gotham Rounded;
-    min-height: 80vh;
 }
 
 
 .card {
     background-color: #CDCBD6;
-    background-image: #CDCBD6;
     border-radius: 20px;
     box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
         0 15px 40px rgba(0, 0, 0, 0.1);
@@ -25,7 +21,7 @@
 
 
 .avatar {
-    border: 10px solid #2a2a72;
+    border: 10px solid#CDCBD6;
     border-radius: 50%;
     height: 150px;
     width: 150px;
