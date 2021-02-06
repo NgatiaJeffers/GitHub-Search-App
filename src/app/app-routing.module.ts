@@ -7,12 +7,12 @@ import { NotFoundComponent } from './not-found/not-found.component'
 
 
 const routes: Routes = [
-  { path: 'user-data', component: UserDataComponent },
+  { path: '', component: UserDataComponent },
   { path: 'user-repo', component: UserRepoComponent },
   { path: '**', component: NotFoundComponent },
 
   // Empty Paths
-  { path: '', redirectTo: "/user-data", pathMatch: 'full' }
+  { path: '', redirectTo: "**", pathMatch: 'full' }
 ];
 
 @NgModule({
