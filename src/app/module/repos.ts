@@ -5,7 +5,6 @@ export class Repos {
         public description: any,
         public watchers: any,
         public language: any,
-        public owner: any,
         public forks: any
     ) {}
 }

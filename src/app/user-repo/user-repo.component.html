@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container justify-content-center align-items-center">
     <h2 class="title">Find A Repo:</h2>
-    <app-search-bar (searchEmiter)="getRepo($event)"></app-search-bar>
+    <app-search-bar class="bar" (searchEmiter)="getRepo($event)"></app-search-bar>
 </div>
 
 
@@ -13,7 +13,7 @@
                 <p class="card-text">{{ r.description }}</p>
             </div>
             <div class="card-footer">
-                <small class="text-muted">{{ r.forks }}<</small>
+                <small class="text-muted">{{ r.forks }} / {{ r.language }} / {{ r.watchers }}</small>
             </div>
         </div>
     </div>
