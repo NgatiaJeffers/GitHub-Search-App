@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RepoService } from './../repo.service';
+import { Repos } from './../module/repos';
 
 @Component({
   selector: 'app-user-repo',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserRepoComponent implements OnInit {
 
-  constructor() { }
+  repo: Repos[];
+
+  constructor(public repoService: RepoService) { }
+
+  getRepo(searchTerm: string) {
+    this.repoService.getRepo(searchTerm).subscribe(data => {
+      this.repo = data;
+      console.log(this.repo);
+    })
+  }
 
   ngOnInit(): void {
+    this.getRepo('NgatiaJeffers');
   }
 
 }
