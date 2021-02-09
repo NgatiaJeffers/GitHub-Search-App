@@ -14,6 +14,7 @@ export class SearchBarComponent implements OnInit {
 
   newUser() {
     this.searchEmiter.emit(this.searchTerm);
+
   }
 
   ngOnInit(): void {

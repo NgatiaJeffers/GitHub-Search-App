@@ -2,7 +2,7 @@
     <app-search-bar (searchEmiter)="getUser($event)"></app-search-bar>
 
     <div class="card" *ngFor="let u of user">
-        <div>
+        <div class="img">
             <img class="avatar" [src]="u.avatar_url" [alt]="u.name"/>
         </div>
         <div class="user-info">
@@ -14,9 +14,7 @@
                 <li>{{ u.following }}<strong>Following</strong></li>
                 <li>{{ u.public_repos }}<strong>Repos</strong></li>
             </ul>
-            <div id="repos">
-                {{ u.repos }}
-            </div>
+            <div id="repos">{{ u.repos }}</div>
         </div>
     </div>
 </div>
